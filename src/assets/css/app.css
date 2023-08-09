@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply antialiased bg-slate-100 text-slate-900 dark:text-white dark:bg-slate-800;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.card {
+  @apply flex flex-col gap-6 px-6 py-6 bg-white shadow-lg dark:bg-slate-900 rounded-2xl;
+}
+
+.button-submit:disabled {
+  @apply bg-gray-700 text-white cursor-not-allowed opacity-50;
+}
+
+.btn {
+  @apply inline-flex justify-center items-center font-medium rounded-xl text-sm px-4 py-2.5 focus:outline-none text-gray-900
+    bg-white hover:bg-gray-100 disabled:opacity-25 transition ease-in-out duration-150;
+}
+
+.btn:disabled {
+  @apply opacity-70 cursor-not-allowed;
+}
+
+.btn-sm {
+  @apply py-1 px-2 text-xs;
+}
+
+.btn-icon {
+  @apply py-2.5 px-2.5;
+}
+
+.primary {
+  @apply text-white bg-primary-700 hover:bg-primary-800 active:bg-primary-900;
+}
+
+.primary-alt {
+  @apply text-primary-500 bg-primary-500/20 border-primary-100 hover:bg-primary-500/30 active:bg-primary-500/40;
+}
+
+.secondary {
+  @apply text-white bg-gray-700 hover:bg-gray-800 active:bg-gray-900;
+}
+
+.secondary-alt {
+  @apply !text-gray-500 dark:text-gray-200 !bg-gray-500/20 border-gray-100 hover:!bg-gray-500/30 active:!bg-gray-500/40;
+}
+
+.danger {
+  @apply text-white !bg-red-700 hover:!bg-red-800 active:!bg-red-900;
+}
+
+.danger-alt {
+  @apply !text-red-500 !bg-red-100 border-red-100 hover:!border-red-200 hover:!bg-red-200 active:!bg-red-300;
+}
+
+.success {
+  @apply text-white !bg-green-700 hover:bg-green-800 active:!bg-green-900;
+}
+
+.success-alt {
+  @apply !text-green-500 !bg-green-500/20 border-green-100 hover:!bg-green-500/30 active:!bg-green-500/40;
+}
+
+.warning {
+  @apply text-white !bg-yellow-700 hover:bg-yellow-800 active:!bg-yellow-900;
+}
+
+.warning-alt {
+  @apply !text-yellow-500 !bg-yellow-500/20 border-yellow-100 hover:!bg-yellow-500/30 active:!bg-yellow-500/40;
+}
+
+.label {
+  @apply block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300;
+}
+
+.control {
+  @apply bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-xl focus:ring-primary-500
+     focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500;
+}
+
+.control:disabled {
+  @apply bg-gray-100 text-gray-500 dark:text-gray-200 dark:bg-gray-600 cursor-not-allowed;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
